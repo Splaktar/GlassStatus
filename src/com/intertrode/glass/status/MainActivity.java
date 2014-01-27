@@ -85,7 +85,7 @@ public class MainActivity extends Activity {
 
 			/* Create output */
 			Card card = new Card(c);
-			cardText = "*** GLASS STATUS ***\n" + cardText + networkState + uptimeText;
+			cardText = cardText + networkState + uptimeText;
 			card.setText(cardText);
 			View cardView = card.toView();
 			setContentView(cardView);
