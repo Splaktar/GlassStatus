@@ -3,13 +3,13 @@ GlassStatus
 
 Voice-activated Google Glass status screen (Battery level, Network, Uptime)
 
-This simple little app is based on [Alex Dennis's] [Glass Battery Level app].
+This fork has been converted to Android Studio. If you would like to use Eclipse, see the parent repository.
+
+This simple little app is based on [Alex Dennis's] work on the [Glass Battery Level app].
 
 By installing this app, you can use the voice command "OK Glass, Status" to display the current Battery level, Network, and Uptime for Glass.
 
 ![Glass Status Vignette](https://raw.github.com/cmenscher/GlassStatus/master/screenshot/2013-12-06%2012.42.32.jpg)
-
-This fork has been converted to Android Studio. If you would like to use Eclipse, see the parent repository.
 
 License
 =======
