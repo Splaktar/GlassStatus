@@ -25,8 +25,7 @@ public class MainActivity extends Activity {
 
 	public static NetworkInfo networkInfo(Context c) {
 		ConnectivityManager conManager = (ConnectivityManager) c.getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo netInfo = conManager.getActiveNetworkInfo();
-		return netInfo;
+        return conManager.getActiveNetworkInfo();
 	}
 
 	private BroadcastReceiver mGlassStatusReceiver = new BroadcastReceiver() {
@@ -37,8 +36,7 @@ public class MainActivity extends Activity {
 			int level = i.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 			int scale = i.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 			float batteryPct = (level / (float) scale) * 100;
-			String cardText = "Battery Level: " + Float.toString(batteryPct)
-					+ "%\n";
+			String cardText = "Battery Level: " + Float.toString(batteryPct) + "%\n";
 
 			/* Network Status */
 			String networkState = "Network: OFFLINE\n";
@@ -48,7 +46,7 @@ public class MainActivity extends Activity {
 			
 			/* Uptime */
 			Long uptimeMillis;
-			String uptimeText = "\n";
+			String uptimeText;
 			uptimeMillis = SystemClock.uptimeMillis();
 			Long u = uptimeMillis / 1000;
 			Long seconds = u % 60;
@@ -59,7 +57,7 @@ public class MainActivity extends Activity {
 			u = u/24;
 			Long days = u;
 			
-			Long ten = Long.valueOf(10);
+			Long ten = 10L;
 			
 			String dayLabel = "days";
 			if(days.equals(1L)) {
@@ -87,7 +85,7 @@ public class MainActivity extends Activity {
 			Card card = new Card(c);
 			cardText = cardText + networkState + uptimeText;
 			card.setText(cardText);
-			View cardView = card.toView();
+			View cardView = card.getView();
 			setContentView(cardView);
 		}
 	};
